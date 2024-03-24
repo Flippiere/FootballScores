@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: footballScores
+datasources:
+  default:
+    driver-class-name: org.mariadb.jdbc.Driver
+    db-type: mariadb
+    dialect: MYSQL
+    url: jdbc:mariadb://localhost:3306/FSAPP
+    username: todo
+    password: todosecret
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+kafka:
+  enabled: false
+netty:
+  default:
+    allocator:
+      max-order: 3
