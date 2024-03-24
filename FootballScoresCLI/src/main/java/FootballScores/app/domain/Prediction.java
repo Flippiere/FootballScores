@@ -1,43 +1,16 @@
 package FootballScores.app.domain;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import FootballScores.app.dto.PredictionKey;
 import io.micronaut.serde.annotation.Serdeable;
 
 @Serdeable
-@Entity
 public class Prediction {
-	
-	@EmbeddedId
 	private PredictionKey id;
-	
-	@JsonIgnore
-	@ManyToOne(fetch=FetchType.EAGER)
-	@MapsId("user_id")
-	@JoinColumn(name="user_id", nullable=false, insertable=false, updatable=false)
 	private User user;
-	
-	@ManyToOne(fetch=FetchType.EAGER)
-	@MapsId("game_id")
-	@JoinColumn(name="game_id", nullable=false, insertable=false, updatable=false)
 	private Game game;
-	
-	@Column
 	private byte team1Score;
-	
-	@Column
 	private byte team2Score;
-	
-	@Column
+	private Long round;
 	private byte points;
 
 	public PredictionKey getId() {
@@ -78,6 +51,14 @@ public class Prediction {
 
 	public void setTeam2Score(byte team2Score) {
 		this.team2Score = team2Score;
+	}
+
+	public Long getRound() {
+		return round;
+	}
+
+	public void setRound(Long round) {
+		this.round = round;
 	}
 
 	public byte getPoints() {

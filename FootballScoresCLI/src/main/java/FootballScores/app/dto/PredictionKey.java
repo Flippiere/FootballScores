@@ -2,19 +2,8 @@ package FootballScores.app.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-
-import io.micronaut.serde.annotation.Serdeable;
-
-@Embeddable
-@Serdeable
 public class PredictionKey implements Serializable{
-	
-	@Column
 	Long user_Id;
-	
-	@Column
 	Long game_Id;
 
 	public Long getUser_Id() {

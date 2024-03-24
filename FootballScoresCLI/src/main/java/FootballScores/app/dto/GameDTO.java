@@ -2,10 +2,6 @@ package FootballScores.app.dto;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-
-import FootballScores.app.domain.Team;
 import io.micronaut.serde.annotation.Serdeable;
 
 @Serdeable

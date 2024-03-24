@@ -27,8 +27,7 @@ public class TeamController {
 	Optional<Team> get(Long id){
 		return repo.findById(id);
 	}
-	
-	
+		
 	@Post("/")
 	HttpResponse<Void> add(@Body TeamDTO teamDetails){
 		if(teamDetails.getName().isEmpty()){

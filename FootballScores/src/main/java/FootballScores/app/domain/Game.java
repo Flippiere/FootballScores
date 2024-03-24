@@ -33,6 +33,9 @@ public class Game {
 	
 	@Column
 	private byte team2Score;
+	
+	@Column
+	private Long round;
 
 	public Long getId() {
 		return id;
@@ -80,5 +83,13 @@ public class Game {
 
 	public void setTeam2Score(byte team2Score) {
 		this.team2Score = team2Score;
+	}
+
+	public Long getRound() {
+		return round;
+	}
+
+	public void setRound(Long round) {
+		this.round = round;
 	}
 }
