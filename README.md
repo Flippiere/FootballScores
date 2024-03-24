@@ -1,2 +1,2 @@
 # FootballScores
- web app for predicting football scores
+ a [WIP] web app for predicting football scores
