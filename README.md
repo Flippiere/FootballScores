@@ -1,2 +1,2 @@
 # FootballScores
- a [WIP] web app for predicting football scores
+ a [WIP] web game built using Micronaut
